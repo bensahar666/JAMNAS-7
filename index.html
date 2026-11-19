@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rundown Jamnas Pitu – Innova Nusantara</title>
+<meta name="description" content="Rundown Jamnas Pitu Innova Nusantara, 21 November 2026 di Hotel Brother’s Inn, Solo Baru. Lokasi, wisata, dan kuliner Surakarta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#12062e; --violet:#2a0f66; --plum:#4b1d8f;
+  --gold:#ffd699; --cream:#fff2e0; --neon:#5ad2ff; --ink:#1c1030;
+  --text:#f3ecff; --muted:#b9a9dc;
+  --card:rgba(255,242,224,.96);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{
+  font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--text);line-height:1.6;
+  background:radial-gradient(1200px 600px at 80% -10%,#5a22b8 0,transparent 60%),
+             radial-gradient(900px 600px at 0% 30%,#3b1486 0,transparent 60%),var(--night);
+  background-attachment:fixed;
+}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--neon);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+nav{position:sticky;top:0;z-index:10;background:rgba(18,6,46,.85);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,214,153,.2)}
+nav .wrap{display:flex;gap:20px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap}
+nav b{color:var(--gold);margin-right:auto;font-weight:700}
+nav a{text-decoration:none;color:var(--muted);font-size:.95rem;font-weight:500}
+nav a:hover{color:var(--gold)}
+
+.hero{padding:56px 0 48px;text-align:left}
+.hero .sub{font-size:clamp(1.6rem,5vw,2.6rem);font-weight:700;letter-spacing:.02em}
+.hero h1{
+  font-family:"Lobster Two",cursive;font-style:italic;font-weight:700;
+  font-size:clamp(4rem,17vw,9.5rem);line-height:.95;color:var(--gold);
+  text-shadow:0 0 28px rgba(255,214,153,.35),0 0 70px rgba(138,92,255,.6);
+  margin:4px 0 14px;
+}
+.venue{font-size:1.15rem;font-weight:700}
+.venue span{color:var(--muted);font-weight:400}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:700;text-decoration:none;font-size:.95rem}
+.btn.gold{background:var(--gold);color:var(--ink)}
+.btn.ghost{border:2px solid var(--gold);color:var(--gold)}
+.btn:hover{filter:brightness(1.1)}
+
+.count{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.count div{background:rgba(255,214,153,.12);border:1px solid rgba(255,214,153,.35);border-radius:12px;padding:10px 16px;min-width:76px;text-align:center}
+.count strong{display:block;font-size:1.9rem;color:var(--gold);line-height:1.2}
+.count small{color:var(--muted)}
+#countMsg{margin-top:12px;color:var(--muted);font-size:.95rem}
+
+section{padding:56px 0}
+h2{font-family:"Lobster Two",cursive;font-style:italic;font-size:clamp(2.2rem,7vw,3.2rem);color:var(--gold);margin-bottom:6px;line-height:1.1}
+.lead{color:var(--muted);margin-bottom:32px;max-width:60ch}
+
+/* timeline */
+.tl{list-style:none;padding:0;position:relative;margin-left:8px}
+.tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:3px;border-radius:3px;background:linear-gradient(var(--gold),var(--neon));box-shadow:0 0 12px var(--neon)}
+.tl li{position:relative;padding:0 0 24px 40px}
+.tl li::before{content:"";position:absolute;left:0;top:10px;width:17px;height:17px;border-radius:50%;background:var(--night);border:3px solid var(--gold);box-shadow:0 0 10px var(--gold)}
+.tl .time{color:var(--gold);font-weight:700;font-size:.95rem}
+.tl .date{color:var(--muted);font-weight:400}
+.item{background:var(--card);color:var(--ink);border-radius:12px;padding:14px 18px;margin-top:6px}
+.item h3{font-size:1.1rem;line-height:1.3}
+.item p,.item ul{font-size:.95rem;color:#4a3a66}
+.item ul{padding-left:18px;margin-top:4px}
+.item .step{border-top:1px dashed #d9bfa0;margin-top:10px;padding-top:8px}
+.item .step b{display:block;font-size:.98rem;color:var(--ink)}
+.item.alt{background:rgba(90,210,255,.14);color:var(--text);border:1px solid rgba(90,210,255,.4)}
+.item.alt p{color:var(--muted)}
+
+/* map */
+.mapbox{border-radius:16px;overflow:hidden;border:2px solid rgba(255,214,153,.5);box-shadow:0 0 40px rgba(138,92,255,.35)}
+.mapbox iframe{display:block;width:100%;height:380px;border:0}
+.addr{margin-top:16px;display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:center}
+.addr p{max-width:48ch}
+.addr strong{color:var(--gold)}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);color:var(--ink);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.card h3{font-size:1.08rem;line-height:1.3}
+.card p{font-size:.93rem;color:#4a3a66;flex:1}
+.card a{align-self:flex-start;margin-top:6px;font-weight:700;font-size:.9rem;color:var(--plum);text-underline-offset:3px}
+.card a:hover{color:#7b3bd6}
+.tag{font-size:.78rem;font-weight:700;color:#7a4b00;background:#ffe3b8;padding:2px 10px;border-radius:99px;align-self:flex-start}
+.note{margin-top:20px;color:var(--muted);font-size:.9rem}
+
+footer{padding:36px 0 56px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,214,153,.2);font-size:.92rem}
+footer b{color:var(--gold)}
+
+@media(max-width:560px){.mapbox iframe{height:300px}.hero{padding-top:36px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Navigasi utama">
+  <div class="wrap">
+    <b>Innova Nusantara</b>
+    <a href="#rundown">Rundown</a>
+    <a href="#lokasi">Lokasi</a>
+    <a href="#wisata">Wisata</a>
+    <a href="#kuliner">Kuliner</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="sub">Rundown</p>
+    <h1>Jamnas Pitu</h1>
+    <p class="venue">Hotel Brother’s Inn, Solo Baru <span>• Sabtu, 21 November 2026</span></p>
+
+    <div class="cta">
+      <a class="btn gold" href="#rundown">Lihat rundown</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Hotel+Brothers+Inn+Solo+Baru" target="_blank" rel="noopener">Buka di Google Maps</a>
+      <a class="btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Jamnas+Pitu+Innova+Nusantara&dates=20261121T050000Z/20261121T150000Z&location=Hotel+Brother%27s+Inn+Solo+Baru&details=Registrasi+12.00%2C+acara+mulai+19.00+WIB" target="_blank" rel="noopener">Simpan ke kalender</a>
+    </div>
+
+    <div class="count" aria-live="polite" id="count">
+      <div><strong id="d">–</strong><small>hari</small></div>
+      <div><strong id="h">–</strong><small>jam</small></div>
+      <div><strong id="m">–</strong><small>menit</small></div>
+      <div><strong id="s">–</strong><small>detik</small></div>
+    </div>
+    <p id="countMsg">Menuju acara dimulai, Sabtu 21 November 2026 pukul 19.00 WIB.</p>
+  </div>
+</header>
+
+<main>
+<section id="rundown">
+  <div class="wrap">
+    <h2>Susunan acara</h2>
+    <p class="lead">Semua waktu dalam WIB. Registrasi dibuka siang hari, acara inti dimulai pukul 19.00.</p>
+
+    <ol class="tl">
+      <li>
+        <div class="time">12:00 – 17:00 <span class="date">• 21 Nov 2026</span></div>
+        <div class="item">
+          <h3>Registrasi</h3>
+          <ul>
+            <li>Peserta mengisi daftar hadir</li>
+            <li>Pembagian merchandise</li>
+            <li>Coffee break</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="time">17:00 – 18:30</div>
+        <div class="item alt">
+          <h3>Persiapan!!!</h3>
+          <p>Yang menginap, mandi dulu.</p>
+        </div>
+      </li>
+      <li>
+        <div class="time">19:00 – 19:15</div>
+        <div class="item">
+          <h3>Acara mulai: Pembukaan</h3>
+          <p>MC keluar, menyambut peserta, dan bercerita sedikit tentang latar belakang acara.</p>
+          <div class="step"><b>Indonesia Raya</b><p>MC meminta peserta berdiri.</p></div>
+          <div class="step"><b>Doa bersama</b><p>Dipimpin oleh ustaz atau orang yang ditunjuk.</p></div>
+        </div>
+      </li>
+      <li>
+        <div class="time">19:15 – 19:30</div>
+        <div class="item">
+          <h3>Sambutan</h3>
+          <ul>
+            <li>Ketua Panitia</li>
+            <li>Pernahsehat</li>
+            <li>Ketua Umum</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="time">19:31 – 19:50</div>
+        <div class="item">
+          <h3>Potong tumpeng dan foto bersama</h3>
+        </div>
+      </li>
+      <li>
+        <div class="time">19:51 – 22:00</div>
+        <div class="item">
+          <h3>Makan malam bersama</h3>
+          <p>Menu utama disajikan.</p>
+          <div class="step"><b>Ramah tamah, games, doorprize, dokumentasi</b><p>Foto bersama dan interaksi santai.</p></div>
+        </div>
+      </li>
+      <li>
+        <div class="time">Akhir acara</div>
+        <div class="item alt">
+          <h3>Penutup</h3>
+          <p>Ucapan terima kasih dan doa penutup.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="lokasi">
+  <div class="wrap">
+    <h2>Lokasi acara</h2>
+    <p class="lead">Hotel Brother’s Inn berada di kawasan Solo Baru, Grogol, Sukoharjo, tepat di selatan Kota Surakarta.</p>
+
+    <div class="mapbox">
+      <iframe title="Peta Hotel Brother’s Inn Solo Baru" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Hotel+Brothers+Inn+Solo+Baru&output=embed"></iframe>
+    </div>
+
+    <div class="addr">
+      <p><strong>Hotel Brother’s Inn</strong><br>Solo Baru, Grogol, Sukoharjo, Jawa Tengah</p>
+      <a class="btn gold" href="https://www.google.com/maps/dir/?api=1&destination=Hotel+Brothers+Inn+Solo+Baru" target="_blank" rel="noopener">Petunjuk arah</a>
+    </div>
+  </div>
+</section>
+
+<section id="wisata">
+  <div class="wrap">
+    <h2>Wisata di sekitar Surakarta</h2>
+    <p class="lead">Ada waktu luang sebelum atau sesudah acara? Dari Solo Baru, pusat kota Solo bisa dicapai kurang lebih 20–40 menit berkendara, tergantung lalu lintas.</p>
+
+    <div class="grid">
+      <article class="card"><span class="tag">Budaya</span><h3>Keraton Kasunanan Surakarta</h3><p>Istana peninggalan Mataram dengan museum pusaka, kereta kencana, dan arsitektur Jawa klasik.</p><a href="https://www.google.com/maps/search/?api=1&query=Keraton+Kasunanan+Surakarta" target="_blank" rel="noopener">Lihat di Maps</a></article>
+      <article class="card"><span class="tag">Budaya</span><h3>Pura Mangkunegaran</h3><p>Istana Mangkunegaran dengan pendapa luas, koleksi batik, dan taman yang asri.</p><a href="https://www.google.com/maps/search/?api=1&query=Pura+Mangkunegaran+Surakarta" target="_blank" rel="noopener">Lihat di Maps</a></article>
+      <article class="card"><span class="tag">Belanja batik</span><h3>Pasar Klewer</h3><p>Pusat grosir batik dan tekstil. Cocok untuk oleh-oleh kain dan pakaian batik.</p><a href="https://www.google.com/maps/search/?api=1&query=Pasar+Klewer+Solo" target="_blank" rel="noopener">Lihat di Maps</a></article>
+      <article class="card"><span class="tag">Kampung batik</span><h3>Kampung Batik Laweyan</h3><p>Kampung perajin batik tua dengan galeri dan workshop yang bisa dikunjungi.</p><a href="https://www.google.com/maps/search/?api=1&query=Kampung+Batik+Laweyan+Solo" target="_blank" rel="noopener">Lihat di Maps</a></article>
+      <article class="card"><span class="tag">Barang antik</span><h3>Pasar Triwindu</h3><p>Pasar barang antik dan kerajinan lawas, dekat Pura Mangkunegaran.</p><a href="https://www.google.com/maps/search/?api=1&query=Pasar+Triwindu+Solo" target="_blank" rel="noopener">Lihat di Maps</a></article>
+      <article class="card"><span class="tag">Sejarah</span><h3>Museum Radya Pustaka</h3><p>Museum tertua di Indonesia dengan koleksi naskah, wayang, dan arca Jawa.</p><a href="https://www.google.com/maps/search/?api=1&query=Museum+Radya+Pustaka+Solo" target="_blank" rel="noopener">Lihat di Maps</a></article>
+      <article class="card"><span class="tag">Taman kota</span><h3>Taman Balekambang</h3><p>Taman hijau dengan kolam dan patung, nyaman untuk jalan santai sore hari.</p><a href="https://www.google.com/maps/search/?api=1&query=Taman+Balekambang+Solo" target="_blank" rel="noopener">Lihat di Maps</a></article>
+      <article class="card"><span class="tag">Keluarga</span><h3>Solo Safari</h3><p>Kebun binatang modern di Jurug dengan area satwa yang luas.</p><a href="https://www.google.com/maps/search/?api=1&query=Solo+Safari" target="_blank" rel="noopener">Lihat di Maps</a></article>
+    </div>
+  </div>
+</section>
+
+<section id="kuliner">
+  <div class="wrap">
+    <h2>Kuliner khas Solo</h2>
+    <p class="lead">Beberapa hidangan yang sayang dilewatkan. Jam buka dan antrean bisa berubah, jadi cek dulu di Google Maps sebelum berangkat.</p>
+
+    <div class="grid">
+      <article class="card"><span class="tag">Makan berat</span><h3>Nasi Liwet Wongso Lemu</h3><p>Nasi gurih santan dengan suwiran ayam, telur, dan areh. Dijual lesehan di Keprabon.</p><a href="https://www.google.com/maps/search/?api=1&query=Nasi+Liwet+Wongso+Lemu+Solo" target="_blank" rel="noopener">Lihat di Maps</a></article>
+      <article class="card"><span class="tag">Makan berat</span><h3>Selat Solo</h3><p>Hidangan bergaya Eropa dengan sentuhan manis-asam Jawa: daging, sayur rebus, dan telur.</p><a href="https://www.google.com/maps/search/?api=1&query=Selat+Solo+Vien%27s" target="_blank" rel="noopener">Lihat di Maps</a></article>
+      <article class="card"><span class="tag">Makan berat</span><h3>Tengkleng</h3><p>Gulai tulang kambing berkuah ringan. Cari tengkleng di sekitar Pasar Klewer.</p><a href="https://www.google.com/maps/search/?api=1&query=Tengkleng+Solo" target="_blank" rel="noopener">Lihat di Maps</a></article>
+      <article class="card"><span class="tag">Makan berat</span><h3>Timlo Solo</h3><p>Sup bening berisi sosis solo, telur pindang, dan ati ampela. Cocok untuk makan malam hangat.</p><a href="https://www.google.com/maps/search/?api=1&query=Timlo+Solo+Sastro" target="_blank" rel="noopener">Lihat di Maps</a></article>
+      <article class="card"><span class="tag">Jajanan</span><h3>Serabi Notosuman</h3><p>Serabi renyah di pinggir dan lembut di tengah, favorit untuk oleh-oleh.</p><a href="https://www.google.com/maps/search/?api=1&query=Serabi+Notosuman+Solo" target="_blank" rel="noopener">Lihat di Maps</a></article>
+      <article class="card"><span class="tag">Jajanan</span><h3>Pasar Gede Hardjonagoro</h3><p>Pasar tradisional dengan jajanan pasar, es dawet telasih, dan lenjongan.</p><a href="https://www.google.com/maps/search/?api=1&query=Pasar+Gede+Solo" target="_blank" rel="noopener">Lihat di Maps</a></article>
+      <article class="card"><span class="tag">Minuman</span><h3>Es Dawet Telasih Bu Dermi</h3><p>Dawet segar dengan biji selasih, santan, dan gula jawa. Pas untuk siang yang panas.</p><a href="https://www.google.com/maps/search/?api=1&query=Es+Dawet+Telasih+Bu+Dermi+Solo" target="_blank" rel="noopener">Lihat di Maps</a></article>
+      <article class="card"><span class="tag">Angkringan</span><h3>Wedangan dan Hik</h3><p>Angkringan khas Solo dengan nasi kucing, sate-satean, dan wedang jahe di malam hari.</p><a href="https://www.google.com/maps/search/?api=1&query=Wedangan+Solo" target="_blank" rel="noopener">Lihat di Maps</a></article>
+    </div>
+    <p class="note">Nama tempat makan di atas hanya rekomendasi umum. Rating dan jam buka dapat dilihat langsung di Google Maps lewat tautan masing-masing.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Jamnas Pitu</b> • Innova Nusantara</p>
+    <p>Sampai jumpa di Hotel Brother’s Inn, Solo Baru.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var target = new Date("2026-11-21T19:00:00+07:00").getTime();
+  var el = {d:document.getElementById("d"),h:document.getElementById("h"),m:document.getElementById("m"),s:document.getElementById("s")};
+  var msg = document.getElementById("countMsg");
+  function pad(n){return String(n).padStart(2,"0");}
+  function tick(){
+    var diff = target - Date.now();
+    if(diff <= 0){
+      el.d.textContent=el.h.textContent=el.m.textContent=el.s.textContent="00";
+      msg.textContent = "Acara sudah dimulai atau telah selesai. Terima kasih sudah hadir!";
+      return;
+    }
+    var s = Math.floor(diff/1000);
+    el.d.textContent = Math.floor(s/86400);
+    el.h.textContent = pad(Math.floor(s%86400/3600));
+    el.m.textContent = pad(Math.floor(s%3600/60));
+    el.s.textContent = pad(s%60);
+  }
+  tick(); setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
